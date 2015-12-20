@@ -1,6 +1,6 @@
 <?php
 
-namespace BlizzardApi\Service;
+namespace LogansUA\BlizzardApi\Service;
 
 use GuzzleHttp\Psr7\Response;
 

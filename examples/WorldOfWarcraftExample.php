@@ -1,10 +1,15 @@
 <?php
 
+namespace Examples\LogansUA\BlizzardApi;
+
+use LogansUA\BlizzardApi\BlizzardClient;
+use LogansUA\BlizzardApi\Service\WorldOfWarcraft;
+
 require_once __DIR__.'/../vendor/autoload.php';
 
-$client = new \BlizzardApi\BlizzardClient('apiKey', 'locale', 'region');
+$client = new BlizzardClient('apiKey', 'locale', 'region');
 
-$wow = new \BlizzardApi\Service\WorldOfWarcraft($client);
+$wow = new WorldOfWarcraft($client);
 
 $response = $wow->getGuild('test-realm', 'test-guild', [
     'fields' => 'achievements,challenge',

@@ -1,10 +1,15 @@
 <?php
 
+namespace Examples\LogansUA\BlizzardApi;
+
+use LogansUA\BlizzardApi\BlizzardClient;
+use LogansUA\BlizzardApi\Service\Diablo;
+
 require_once __DIR__.'/../vendor/autoload.php';
 
-$client = new \BlizzardApi\BlizzardClient('apiKey', 'locale', 'region');
+$client = new BlizzardClient('apiKey', 'locale', 'region');
 
-$diablo = new \BlizzardApi\Service\Diablo($client);
+$diablo = new Diablo($client);
 
 $response = $diablo->getItemDataById('Unique_Shoulder_103_x1');
 

@@ -1,6 +1,6 @@
 <?php
 
-namespace BlizzardApi;
+namespace LogansUA\BlizzardApi;
 
 /**
  * Class Blizzard Client
@@ -9,7 +9,7 @@ namespace BlizzardApi;
  */
 class BlizzardClient
 {
-    const API_URL_PATTERN = 'https://region.api.battle.net';
+    const API_URL_PATTERN = 'https://<region>.api.battle.net';
 
     /**
      * @var string $apiUrl Blizzard API url
@@ -142,6 +142,6 @@ class BlizzardClient
      */
     private function updateApiUrl($region)
     {
-        $this->apiUrl = str_replace('region', strtolower($region), self::API_URL_PATTERN);
+        $this->apiUrl = str_replace('<region>', strtolower($region), self::API_URL_PATTERN);
     }
 }

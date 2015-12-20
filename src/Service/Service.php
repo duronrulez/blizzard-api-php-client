@@ -1,8 +1,8 @@
 <?php
 
-namespace BlizzardApi\Service;
+namespace LogansUA\BlizzardApi\Service;
 
-use BlizzardApi\BlizzardClient;
+use LogansUA\BlizzardApi\BlizzardClient;
 use GuzzleHttp\Client;
 use GuzzleHttp\Psr7\Response;
 
